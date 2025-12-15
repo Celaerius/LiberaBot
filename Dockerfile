@@ -7,11 +7,11 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install ALL dependencies (including devDependencies for tsx)
+RUN npm ci
 
 # Copy source code
 COPY . .
 
-# Start the bot (sans --env-file car on utilise les variables d'environnement de Railway)
-CMD ["node", "src/main.ts"]
+# Start the bot with tsx
+CMD ["npx", "tsx", "src/main.ts"]
