@@ -13,5 +13,5 @@ RUN npm ci --only=production
 # Copy source code
 COPY . .
 
-# Start the bot
-CMD ["node", "--env-file", ".env", "src/main.ts"]
+# Start the bot (sans --env-file car on utilise les variables d'environnement de Railway)
+CMD ["node", "src/main.ts"]
