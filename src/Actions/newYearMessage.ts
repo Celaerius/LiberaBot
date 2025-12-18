@@ -5,7 +5,7 @@ export function newYearMessage(client) {
     const channelId = '1226877403117256746';
     // Exemple : date/heure locales de Belgique (Europe/Brussels)
     // 2026-01-01 00:00:00
-    const targetLocalISO = '2025-12-18T14:26:00';
+    const targetLocalISO = '2025-12-18T14:30:00';
     const BRUSSELS_ZONE = 'Europe/Brussels';
     // Convertit l'heure locale de Bruxelles en UTC pour une comparaison fiable
     const targetUtc = DateTime.fromISO(targetLocalISO, { zone: BRUSSELS_ZONE }).toUTC();
@@ -15,11 +15,7 @@ export function newYearMessage(client) {
         const nowUtc = DateTime.utc();
         const nowBrussels = nowUtc.setZone(BRUSSELS_ZONE);
         const targetBrussels = targetUtc.setZone(BRUSSELS_ZONE);
-        console.log(
-            `Vérification (Bruxelles) : maintenant = ${nowBrussels.toFormat('yyyy-LL-dd HH:mm:ss ZZZ')}, ` +
-            `cible = ${targetBrussels.toFormat('yyyy-LL-dd HH:mm:ss ZZZ')}`
-        );
-        
+
         if (!hasSent && nowUtc.toMillis() >= targetUtc.toMillis()) {
             const channel = client.channels.cache.get(channelId);
             
