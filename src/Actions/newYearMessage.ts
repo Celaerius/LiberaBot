@@ -6,6 +6,7 @@ export function newYearMessage(client) {
 
     const checkAndSendMessage = () => {
         const now = new Date();
+        console.log(`Vérification de la date : maintenant = ${now}, cible = ${targetDate}`);
         
         if (now >= targetDate) {
             const channel = client.channels.cache.get(channelId);
