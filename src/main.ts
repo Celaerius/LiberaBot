@@ -1,5 +1,6 @@
 import { Client, GatewayIntentBits, Events, Partials } from 'discord.js';
 import { catchReactions } from './Actions/catchReactions.ts';
+import { newYearMessage } from './Actions/newYearMessage.ts';
 
 const client = new Client({ 
     intents: [
@@ -115,6 +116,7 @@ client.on(Events.MessageDelete, async (message) => {
 });
 
 catchReactions(client);
+newYearMessage(client);
 
 
 await client.login(process.env.BOT_TOKEN);
