@@ -3,6 +3,8 @@ import { DateTime } from 'luxon';
 
 export function newYearMessage(client) {
     const channelId = '1422486753016680521';
+    // Channel ID server Celo: 1226877403117256746
+    // Channel ID server Classe: 1422486753016680521
     // Exemple : date/heure locales de Belgique (Europe/Brussels)
     // 2026-01-01 00:00:00
     const targetLocalISO = '2026-01-01 00:00:00';
