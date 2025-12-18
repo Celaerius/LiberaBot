@@ -2,7 +2,7 @@ import { Events } from 'discord.js';
 
 export function newYearMessage(client) {
     const channelId = '1226877403117256746'; // Remplacez par l'ID de votre canal
-    const targetDate = new Date('2025-12-18T13:40:00'); // Date et heure cibles
+    const targetDate = new Date('2026-01-01T00:00:00'); // Date et heure cibles
 
     const checkAndSendMessage = () => {
         const now = new Date();
