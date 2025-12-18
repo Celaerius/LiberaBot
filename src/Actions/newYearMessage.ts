@@ -2,10 +2,10 @@ import { Events } from 'discord.js';
 import { DateTime } from 'luxon';
 
 export function newYearMessage(client) {
-    const channelId = '1226877403117256746';
+    const channelId = '1422486753016680521';
     // Exemple : date/heure locales de Belgique (Europe/Brussels)
     // 2026-01-01 00:00:00
-    const targetLocalISO = '2025-12-18T14:30:00';
+    const targetLocalISO = '2026-01-01 00:00:00';
     const BRUSSELS_ZONE = 'Europe/Brussels';
     // Convertit l'heure locale de Bruxelles en UTC pour une comparaison fiable
     const targetUtc = DateTime.fromISO(targetLocalISO, { zone: BRUSSELS_ZONE }).toUTC();
